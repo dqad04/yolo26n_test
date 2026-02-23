@@ -3,7 +3,7 @@
 > **Real-time object detection powered by the Hailo-10H NPU on Raspberry Pi 5**
 
 ![Hailo-10H](https://img.shields.io/badge/Hailo-10H%2040%20TOPS-blue)
-![Python](https://img.shields.io/badge/Python-3.11+-green)
+![Python](https://img.shields.io/badge/Python-3.13+-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## ⚠️ **CRITICAL: Hardware Compatibility Warning**
@@ -69,9 +69,10 @@ hailortcli fw-control identify
 
 **Expected Output:**
 ```
-Board name:        HAILO10H
-Architecture:      HAILO10H
-Firmware version:  4.18.0
+Control Protocol Version: 2
+Firmware Version: 5.1.1 (release,app)
+Logger Version: 0
+Device Architecture: HAILO10H
 ```
 ---
 
@@ -90,7 +91,7 @@ sudo apt autoremove
 
 ```bash
 sudo apt update
-sudo apt install hailort-pcie-driver hailort
+sudo apt install hailo-h10-all
 sudo reboot
 ```
 
@@ -175,7 +176,7 @@ yolo26_test/
 |--------|-------|
 | **NPU Speed (raw)** | 243 FPS |
 | **Live Pipeline (Python)** | 14-15 FPS |
-| **Model Size** | ~6 MB |
+| **Model Size** | 4.7 MB |
 | **Input Resolution** | 640×640 RGB |
 | **Power Draw** | ~3W (NPU only) |
 
@@ -281,7 +282,7 @@ Where `[l, t, r, b]` are the raw box outputs and `stride ∈ {8, 16, 32}`.
 **Fix:**
 ```bash
 lspci | grep Hailo
-# Should show: "Hailo Technologies Ltd. Hailo-10"
+# Should show: "Hailo Technologies Ltd. Hailo-10H AI Processor"
 ```
 
 If nothing appears:
