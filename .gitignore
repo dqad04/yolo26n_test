@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+hailo_venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Output files (can be regenerated)
+*.avi
+*.mp4
+hailort.log
+
+# Test images (keep the sample but ignore temporary outputs)
+output_image.jpg
+headless_output.avi
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Config files with sensitive data (uncomment if needed)
+# *.yaml
+# *.json
