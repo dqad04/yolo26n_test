@@ -3,7 +3,7 @@
 > **Real-time object detection powered by the Hailo-10H NPU on Raspberry Pi 5**
 
 ![Hailo-10H](https://img.shields.io/badge/Hailo-10H%2040%20TOPS-blue)
-![Python](https://img.shields.io/badge/Python-3.13+-green)
+![Python](https://img.shields.io/badge/Python-3.11+-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## ⚠️ **CRITICAL: Hardware Compatibility Warning**
@@ -91,7 +91,7 @@ sudo apt autoremove
 
 ```bash
 sudo apt update
-sudo apt install hailo-h10-all
+sudo apt install hailort-pcie-driver hailort
 sudo reboot
 ```
 
